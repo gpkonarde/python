@@ -9,7 +9,7 @@ class Student:
         self.root.title("Student Registration System")
         self.root.geometry("1350x700+0+0")
         
-        title = Label(self.root,text = "Student Registration System",font=("Ubuntu",40,"bold",),bd=10,relief=GROOVE,bg="#5bccf6",fg="red")
+        title = Label(self.root,text = "Student Registration System",font=("arial",40,"bold",),bd=10,relief=GROOVE,bg="#5bccf6",fg="red")
         title.pack(side=TOP,fill=X)
 
         # # # ALL Variables # # #  
@@ -28,47 +28,47 @@ class Student:
         Manage_Frame = Frame(self.root,bd=4,relief=RIDGE,bg="#ef9273")
         Manage_Frame.place(x=20,y=100,width=455,height=590)
 
-        m_title = Label(Manage_Frame,text = "Manage Students ", bg="#ef9273",fg="white",font=("Ubuntu",25,"bold"))
+        m_title = Label(Manage_Frame,text = "Manage Students ", bg="#ef9273",fg="white",font=("arial",25,"bold"))
         m_title.grid(row=0,columnspan =2,pady=4)
 
-        lbl_roll = Label(Manage_Frame,text = "Roll No: ", bg = "#ef9273",fg="white",font=("Ubuntu",20,"bold"))
+        lbl_roll = Label(Manage_Frame,text = "Roll No: ", bg = "#ef9273",fg="white",font=("arial",20,"bold"))
         lbl_roll.grid(row=1,column =0,pady=10,padx = 20,sticky="w")
 
-        txt_Roll = Entry(Manage_Frame,textvariable=self.Roll_No_var,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_Roll = Entry(Manage_Frame,textvariable=self.Roll_No_var,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_Roll.grid(row=1,column =1,pady=10,padx = 20,sticky="w")
 
-        lbl_name = Label(Manage_Frame,text = "Name :",bg = "#ef9273",fg="white", font=("Ubuntu",20,"bold"))
+        lbl_name = Label(Manage_Frame,text = "Name :",bg = "#ef9273",fg="white", font=("arial",20,"bold"))
         lbl_name.grid(row=2,column =0,pady=10,padx = 20,sticky="w")
 
-        txt_Name = Entry(Manage_Frame,textvariable=self.name_var,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_Name = Entry(Manage_Frame,textvariable=self.name_var,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_Name.grid(row=2,column =1,pady=10,padx = 20,sticky="w")
         
-        lbl_email = Label(Manage_Frame,text = "Email :",bg = "#ef9273",fg="white",font=("Ubuntu",20,"bold"))
+        lbl_email = Label(Manage_Frame,text = "Email :",bg = "#ef9273",fg="white",font=("arial",20,"bold"))
         lbl_email.grid(row=3,column =0,pady=10,padx = 20,sticky="w")
 
-        txt_Email = Entry(Manage_Frame,textvariable=self.email_var,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_Email = Entry(Manage_Frame,textvariable=self.email_var,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_Email.grid(row=3,column =1,pady=10,padx = 20,sticky="w")
 
-        lbl_gender = Label(Manage_Frame,text = "Gender :",bg = "#ef9273",fg = "white",font=("Ubuntu",20,"bold"))
+        lbl_gender = Label(Manage_Frame,text = "Gender :",bg = "#ef9273",fg = "white",font=("arial",20,"bold"))
         lbl_gender.grid(row=4,column =0,pady=10,padx = 20,sticky="w")
 
-        combo_gender = ttk.Combobox(Manage_Frame,textvariable=self.gender_var,font=("Ubuntu",13,"bold"),state='readonly')
+        combo_gender = ttk.Combobox(Manage_Frame,textvariable=self.gender_var,font=("arial",13,"bold"),state='readonly')
         combo_gender['values'] = ["Male","Female","Other"]
         combo_gender.grid(row = 4,column=1,padx=20,pady=10)
 
-        lbl_contact = Label(Manage_Frame,text = "Contact :",bg = "#ef9273",fg = "white", font=("Ubuntu",20,"bold"))
+        lbl_contact = Label(Manage_Frame,text = "Contact :",bg = "#ef9273",fg = "white", font=("arial",20,"bold"))
         lbl_contact.grid(row = 5,column=0,pady =10,padx =20,sticky = "W")
 
-        txt_contact = Entry(Manage_Frame,textvariable=self.contact_var,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_contact = Entry(Manage_Frame,textvariable=self.contact_var,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_contact.grid(row=5,column =1,pady=10,padx = 20,sticky="w")
 
-        lbl_dob = Label(Manage_Frame,text = "DOB :",bg = "#ef9273",fg = "white", font=("Ubuntu",20,"bold"))
+        lbl_dob = Label(Manage_Frame,text = "DOB :",bg = "#ef9273",fg = "white", font=("arial",20,"bold"))
         lbl_dob.grid(row = 6,column=0,pady =10,padx =20,sticky = "W")
 
-        txt_dob = Entry(Manage_Frame,textvariable=self.dob_var,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_dob = Entry(Manage_Frame,textvariable=self.dob_var,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_dob.grid(row=6,column=1,pady=10,padx=20,sticky="w")
 
-        lbl_address = Label(Manage_Frame,text = "Address :",bg = "#ef9273",fg = "white", font=("Ubuntu",20,"bold"))
+        lbl_address = Label(Manage_Frame,text = "Address :",bg = "#ef9273",fg = "white", font=("arial",20,"bold"))
         lbl_address.grid(row = 7,column=0,pady =10,padx =20,sticky = "W")
 
         self.txt_address = Text(Manage_Frame,width=25,height=2.7)
@@ -93,28 +93,29 @@ class Student:
         clearbtn.grid(row=0,column=3,padx=10,pady=10)
 
         # # # Detail Frame # # #
+
         Detail_Frame = Frame(self.root,bd=4,relief=RIDGE,bg="#ef9273")
         Detail_Frame.place(x=500,y=100,width=830,height=590)
 
-        lbl_search = Label(Detail_Frame,text = "Search By",bg = "#ef9273",fg = "white", font=("Ubuntu",20,"bold"))
+        lbl_search = Label(Detail_Frame,text = "Search By",bg = "#ef9273",fg = "white", font=("arial",20,"bold"))
         lbl_search.grid(row = 0,column=0,pady =10,padx =20,sticky = "W")
 
-        combo_search = ttk.Combobox(Detail_Frame,textvariable=self.search_by,width=10,font=("Ubuntu",13,"bold"),state='readonly')
+        combo_search = ttk.Combobox(Detail_Frame,textvariable=self.search_by,width=10,font=("arial",13,"bold"),state='readonly')
         combo_search['values'] = ["Name","Roll_No","DOB","Contact"]
         combo_search.grid(row = 0,column=1,padx=20,pady=10)
 
 
-        txt_search = Entry(Detail_Frame,textvariable=self.search_txt,font=("Ubuntu",15,"bold"),bd=5,relief=GROOVE)
+        txt_search = Entry(Detail_Frame,textvariable=self.search_txt,font=("arial",15,"bold"),bd=5,relief=GROOVE)
         txt_search.grid(row=0,column=2,pady=10,padx=20,sticky="w")
 
-        searchbtn = Button(Detail_Frame,command=self.search_data,pady=5,text= "Search ",width=10)
+        searchbtn = Button(Detail_Frame,command=self.search_data,pady=5,text= "Search ",width=5)
         searchbtn.grid(row=0,column=3,padx=10,pady=10)
         
-        showallbtn = Button(Detail_Frame,pady=5,command=self.fetch_data,text= "Show All",width=10)
+        showallbtn = Button(Detail_Frame,pady=5,command=self.fetch_data,text= "Show All",width=5)
         showallbtn.grid(row=0,column=4,padx=10,pady=10)
 
-        # sortbtn = Button(Detail_Frame,pady=5,command=self.sort_data,text= "Sort",width=5)
-        # sortbtn.grid(row=0,column=5,padx=10,pady=10)
+        sortbtn = Button(Detail_Frame,pady=5,command=self.sort_data,text= "Sort",width=5)
+        sortbtn.grid(row=0,column=5,padx=10,pady=10)
 
 
         # # # Table Frame # # # 
@@ -246,19 +247,21 @@ class Student:
                 con.commit()
             con.close()
 
-    # def sort_data(self):
-    #     con=pymysql.connect(host = "localhost",user="root",password="",database="gajanan")
-    #     cur = con.cursor()
-    #     cur.execute("SELECT * FROM student WHERE DATE(%s) > 2022 order by %s ASC ", self.name_var.get())
-    #     rows = cur.fetchall() 
-    #     if len(rows) != 0:
-    #         self.Student_table.delete(*self.Student_table.get_children())
-    #         for row in rows:
-    #             self.Student_table.insert('',END,values=row)
-    #         con.commit()
-    #     con.close() 
+    def sort_data(self):
+        con=pymysql.connect(host = "localhost",user="root",password="",database="gajanan")
+        cur = con.cursor()
+        cur.execute("SELECT * FROM student order by %s ASC ",self.dob_var.get())
+        rows = cur.fetchall()
+        # if length of rows is not 0 then there is something in it
+        if len(rows) != 0:
+            self.Student_table.delete(*self.Student_table.get_children())
+            # and with this loop we will again display the fetched data
+            for row in rows:
+                self.Student_table.insert('',END,values=row)
+            con.commit()
+        con.close()
 
-
+# student greater than age > 25 limit 10
 
 root = Tk()
 ob = Student(root)
